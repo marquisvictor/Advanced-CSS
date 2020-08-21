@@ -22,6 +22,10 @@
         background-color: $color-white;
         color: $color-gray;
     }
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+    }
     &::after {
         content: "";
         display: inline-block;
@@ -34,13 +38,22 @@
         z-index: -1;
         transition: all .4s;
     }
-    &-white::after {
+    &--white::after {
         background-color: $color-white;
     }
     &:hover::after {
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
     }
+
+    &--green::after {
+        background-color: $color-primary;
+    }
+    &:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
