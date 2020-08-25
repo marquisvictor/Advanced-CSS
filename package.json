@@ -6,7 +6,7 @@
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css --watch"
   },
-  "author": "Victor Irekponor",
+  "author": "Victor-Irekponor",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
