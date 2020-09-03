@@ -7,10 +7,11 @@
     padding: 4rem;
     font-size: default-font-size;
     transform: skew(-12deg);
-
     & > * {
     transform: skew(12deg); 
-    }
+    } 
+
+    
 
     &__shape {
         width: 15rem;
