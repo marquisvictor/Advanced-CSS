@@ -1,3 +1,6 @@
+@import "../abstract/mixins";
+
+
 .story {
     width: 75%;
     margin: 0 auto;
@@ -10,6 +13,31 @@
     & > * {
     transform: skew(12deg); 
     } 
+
+    @include respond(tab-port) {
+        width: 100%;
+        transform: skew(0);
+        & > * {
+            transform: skew(0); 
+            }
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        transform: skew(0);
+        & > * {
+            transform: skew(0); 
+            }
+        padding: 0;
+        padding-bottom: 3rem;
+        // margin-top: -5rem;
+     
+
+    }
+
+
 
     
 
@@ -46,6 +74,8 @@
         opacity: 0;
         transition: all .5s;
         backface-visibility: hidden;
+
+ 
 
     }
     &:hover &__caption {

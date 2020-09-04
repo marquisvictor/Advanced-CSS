@@ -7,6 +7,12 @@
     box-shadow: 0 1.5rem 4rem black;
     transition: transform .3s;
     // transform: skewY(7deg);
+    
+    @include respond(tab-port) {
+        padding: 2rem;
+
+    }
+
 
     &__icon {
     font-size: 6rem;
@@ -17,6 +23,12 @@
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+
+    @include respond(tab-port) {
+        margin-bottom: 0rem;
+
+        
+    }
     }
 
     &:hover {
