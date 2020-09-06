@@ -4,6 +4,14 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        
+        @include respond(tab-port) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    @include respond(tab-port) {
+        max-width: 50rem;
     }
 
     @include clearfix;
@@ -11,8 +19,18 @@
     [class*="col-"] {
         float: left;
 
-        &:not(:last-child) {
+        &:not(:last-child) { 
         margin-right: $gutter-horizontal;
+
+        @include respond(tab-port) {  
+            margin-right: 0;
+            margin-bottom: 6rem;
+        }
+
+        }
+
+        @include respond(tab-port) {  // usually done for mobile devices
+            width:100% !important;
         }
     }
 

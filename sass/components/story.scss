@@ -1,0 +1,90 @@
+@import "../abstract/mixins";
+
+
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba(black, .1);
+    border-radius:  3px;
+    background-color: rgba (rgba(255, 251, 251, 0.87));
+    padding: 4rem;
+    font-size: default-font-size;
+    transform: skew(-12deg);
+    & > * {
+    transform: skew(12deg); 
+    } 
+
+    @include respond(tab-port) {
+        width: 100%;
+        transform: skew(0);
+        & > * {
+            transform: skew(0); 
+            }
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        transform: skew(0);
+        & > * {
+            transform: skew(0); 
+            }
+        padding: 0;
+        padding-bottom: 3rem;
+        // margin-top: -5rem;
+     
+
+    }
+
+
+
+    
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        // background-color: orange;
+        float: left;
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+
+        clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        position: relative;
+    }
+
+    &__image {
+        height: 100%;
+        transform: translateX(-4rem) scaleX(1.4);
+        backface-visibility: hidden;
+        transition: all .5s;
+
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+        backface-visibility: hidden;
+
+ 
+
+    }
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__image {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(3px) brightness(80%);
+    }
+}  
